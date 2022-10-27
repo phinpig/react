@@ -1,14 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import AppProducts from './AppProducts';
 import './index.css';
-// import AppProfile from './AppProfile';
 import reportWebVitals from './reportWebVitals';
+import UseMemo from './UseMemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        <AppProducts />
+        <UseMemo />
     </React.StrictMode>
 );
 

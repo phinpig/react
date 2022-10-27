@@ -109,9 +109,104 @@ https://transform.tools/html-to-jsx
 https://cssgenerator.org/box-shadow-css-generator.html
 
 ## event
+
 https://reactjs.org/docs/handling-events.html
 
+## 참고
 
-## 참고 
 https://cocoon1787.tistory.com/category/%E2%9A%9B%EF%B8%8FReact
 https://react.vlpt.us/
+
+## state : 컴포넌트의 상태
+
+### useState
+
+```
+const [state,setStae] = useState(초기값);
+
+setStae((prev) => {
+    return newPrev;
+});
+
+// 입력전에 무거운 작업시 첫 랜더링만 실행되게..
+useState(()=>{
+    return heavyWorks();
+});
+```
+
+### useEffect
+
+1. Mount(화면에 첫 랜더링,useEffect)
+2. Update(다시 랜더링,useEffect)
+3. Unmount(화면이 사라질때,useEffect)
+
+ex 1)
+
+```
+랜더링 될때 마다 실행
+useEffect(()=>{
+    //작업
+});
+```
+
+ex2)
+
+```
+value 값이 바뀔때 실행, 빈배열([])일때 하면에 첫 렌더링 될때 실행
+useEffect(()=>{
+    //작업
+},[value]);
+```
+
+clean up - 정리
+
+```
+    return () =>{
+
+    }
+
+```
+
+### useRef(value)
+
+1. 저장공간
+2. Ref의 변화 -> No 랜더링 -> 변수들의 값이 유지됨
+3. State의 변화 -> fpsejfld -> 그래도 Ref의 값은 유지됨
+4. DOM 요소에 접근 focus()
+
+```
+const ref = useRef(value)
+ref =>  {current:value}
+```
+
+### useContext
+
+1. 전역적인 변수로 선언되어, 하위 자식 컴포넌트에서 사용할수 있다.(인자 전달이 필요없음)
+2. Context를 사용하면 컴포넌트를 재사용하기 어려워 질수 있다.
+3. Prop drilling을 피하기 위한 목적이라면 Component Compostion(컴포넌트 합성)을 먼저 고려해보자
+
+### useMemo
+
+1. 메모리제이션된 값을 반환한다
+
+```
+const value = useMemo(()=>{
+     calculate();
+},[item])
+```
+
+### useCallback
+
+1. 메모리제이션된 함수를 반환한다
+
+```
+const value = useCallback(()=>{
+    return calculate();
+},[item])
+```
+
+### useReducer
+1. Reducer 
+2. Dispatch
+3. Action
+
