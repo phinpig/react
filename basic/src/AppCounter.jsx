@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Counter from './components/Counter';
 
-let setNum = 0;
-
+ 
 export default function AppCounter() {
     const [count, setCount] = useState(0);
     const totalCount = () => setCount((prev) => prev + 1);
