@@ -81,6 +81,8 @@ React 베타 문서: https://beta.reactjs.org/
 
 Create React App: https://create-react-app.dev/
 
+## CSR (클라이언트 사이드 랜더링)
+
 ## JSX 문법 전리(기본)
 
 이거 한번 읽어 보시면 좋을 것 같아요 (선택사항):
@@ -93,7 +95,7 @@ Create React App: https://create-react-app.dev/
 -   App.js에서 App() 시작해야함
 -   태그 하나이상일 경우 태그로 감싸야 한다. => ex)<>....</>
 -   react에서 class 사용시 class => className 으로 사용해야한다.
--   스타일/변수 사용시 {} 사용해야 한다.
+-   jsx안에서 스타일/자바스크립트 사용시 {} 사용해야 한다.
 
 ```
 style={{ width: '200px', height: '200px' }}
@@ -187,7 +189,8 @@ ref =>  {current:value}
 
 ### useMemo
 
-1. 메모리제이션된 값을 반환한다
+1. 메모리제이션된 값
+2. 랜더링시 전달되는 값이 객체인 경우 객체의 주소 값이 변화되지 않게 한다.
 
 ```
 const value = useMemo(()=>{
@@ -197,7 +200,8 @@ const value = useMemo(()=>{
 
 ### useCallback
 
-1. 메모리제이션된 함수를 반환한다
+1. 메모리제이션된 함수
+2. 랜더링시 전달되는 값이 함수인 경우 함수의 주소 값이 변화되지 않게 한다.
 
 ```
 const value = useCallback(()=>{
@@ -206,7 +210,7 @@ const value = useCallback(()=>{
 ```
 
 ### useReducer
-1. Reducer 
+
+1. Reducer
 2. Dispatch
 3. Action
-
