@@ -119,6 +119,11 @@ https://reactjs.org/docs/handling-events.html
 https://cocoon1787.tistory.com/category/%E2%9A%9B%EF%B8%8FReact
 https://react.vlpt.us/
 
+## React
+데이터를 State(내부상태) Props (외부로부터 전달받은 상태) 나타내는 render가 있다
+상태가 변경될때마다 re-render 된다.
+실제로 변경된 부분만 화면에 업데이트 된다.
+ 
 ## state : 컴포넌트의 상태
 
 ### useState
