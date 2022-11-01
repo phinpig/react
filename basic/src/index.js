@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
-import AppCounter from './AppCounter';
-
+ 
+import AppXY from './AppXY'; 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <AppCounter />
+    <AppXY />
   </React.StrictMode>
->>>>>>> 47b497be9788afec3243122dffa439e0d63608bd
 );
 
 // If you want to start measuring performance in your app, pass a function
