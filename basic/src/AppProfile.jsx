@@ -3,8 +3,8 @@ import Profile from './components/Profile';
 import Avartar from './components/Avartar';
 
 export default function AppProfile() {
-    const handClick = (event) => {
-        console.log(event);
+    const handClick = (e) => {
+        console.log(e.Name);
         alert('버튼이 클릭됨');
     };
     return (
