@@ -27,12 +27,13 @@ export default function AppMentor(props) {
                     //         title: prev.mentor.title,
                     //     },
                     // }));
-                  setPerson((prev) => ({
+                    setPerson((prev) => ({
                         ...prev,
                         mentor: {
-                          ...prev.mentor,name
+                            ...prev.mentor,
+                            name,
                         },
-                    }));     
+                    }));
                 }}
             >
                 멘토 이름 바꾸기
@@ -41,11 +42,12 @@ export default function AppMentor(props) {
                 onClick={() => {
                     const title = prompt(`what's your mentor's title?`);
                     setPerson((prev) => ({
-                      ...prev,
-                      mentor: {
-                        ...prev.mentor,title
-                      },
-                  }))
+                        ...prev,
+                        mentor: {
+                            ...prev.mentor,
+                            title,
+                        },
+                    }));
                 }}
             >
                 멘토 타이틀 바꾸기
