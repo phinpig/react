@@ -132,14 +132,9 @@ https://react.vlpt.us/
 ```
 const [state,setStae] = useState(초기값);
 
-setStae((prev) => {
-    return newPrev;
-});
+setStae((prev) =>  newPrev);
 
-// 입력전에 무거운 작업시 첫 랜더링만 실행되게..
-useState(()=>{
-    return heavyWorks();
-});
+
 ```
 
 ### useEffect
