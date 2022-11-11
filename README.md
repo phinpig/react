@@ -184,9 +184,12 @@ ref =>  {current:value}
 
 ### useContext
 
+1. 두 컴포넌트의 상태값을 공유해야 한다면..
 1. 전역적인 변수로 선언되어, 하위 자식 컴포넌트에서 사용할수 있다.(인자 전달이 필요없음)
-2. Context를 사용하면 컴포넌트를 재사용하기 어려워 질수 있다.
-3. Prop drilling을 피하기 위한 목적이라면 Component Compostion(컴포넌트 합성)을 먼저 고려해보자
+1. Context를 사용하면 컴포넌트를 재사용하기 어려워 질수 있다.
+1. Prop drilling을 피하기 위한 목적이라면 Component Compostion(컴포넌트 합성)을 먼저 고려해보자
+
+모든 컴포넌트들이 필요하다면 어플리케이션 전반적으로 필요한 경우 Context API를 사용할 수 있다.
 
 ### useMemo
 
